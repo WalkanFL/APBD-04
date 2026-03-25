@@ -143,7 +143,7 @@ public sealed class ZadaniaLinq
     /// </summary>
     public IEnumerable<string> Zadanie09_TrzyNajnowszeZapisy()
     {
-        
+        return DaneUczelni.Zapisy.OrderBy(z => z.DataZapisu).Reverse().Select(z => $"{z.DataZapisu} {z.StudentId} {z.PrzedmiotId}").Take(3);
         //throw Niezaimplementowano(nameof(Zadanie09_TrzyNajnowszeZapisy));
     }
 
@@ -159,7 +159,8 @@ public sealed class ZadaniaLinq
     /// OFFSET 2 ROWS FETCH NEXT 2 ROWS ONLY;
     /// </summary>
     public IEnumerable<string> Zadanie10_DrugaStronaPrzedmiotow()
-    {
+    {   //use select many
+        return 
         throw Niezaimplementowano(nameof(Zadanie10_DrugaStronaPrzedmiotow));
     }
 
